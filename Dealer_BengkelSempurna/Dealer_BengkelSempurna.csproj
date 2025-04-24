@@ -1,0 +1,199 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{45BED47B-ECAE-4C72-BE28-90CAA5382D26}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Dealer_BengkelSempurna</RootNamespace>
+    <AssemblyName>Dealer_BengkelSempurna</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="admin_master.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="admin_master.Designer.cs">
+      <DependentUpon>admin_master.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dataset\DealeraBengkelDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DealeraBengkelDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DealerBengkelSempurna.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DealerBengkelSempurna.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Bus\Bus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\Bus\Bus.Designer.cs">
+      <DependentUpon>Bus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\CRUD_MOTOR\Motor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\CRUD_MOTOR\Motor.Designer.cs">
+      <DependentUpon>Motor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Karyawan\karyawan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\Karyawan\karyawan.Designer.cs">
+      <DependentUpon>karyawan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Member\member.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\Member\member.Designer.cs">
+      <DependentUpon>member.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Mobil\Mobil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\Mobil\Mobil.Designer.cs">
+      <DependentUpon>Mobil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Posisi\CRUD_POSISI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\Posisi\CRUD_POSISI.Designer.cs">
+      <DependentUpon>CRUD_POSISI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Services\services.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\Services\services.Designer.cs">
+      <DependentUpon>services.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\SukuCadang\SukuCadang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\SukuCadang\SukuCadang.Designer.cs">
+      <DependentUpon>SukuCadang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Supplier\supplier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\Supplier\supplier.Designer.cs">
+      <DependentUpon>supplier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="admin_master.resx">
+      <DependentUpon>admin_master.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\Bus\Bus.resx">
+      <DependentUpon>Bus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\CRUD_MOTOR\Motor.resx">
+      <DependentUpon>Motor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\Karyawan\karyawan.resx">
+      <DependentUpon>karyawan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\Member\member.resx">
+      <DependentUpon>member.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\Mobil\Mobil.resx">
+      <DependentUpon>Mobil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\Posisi\CRUD_POSISI.resx">
+      <DependentUpon>CRUD_POSISI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\Services\services.resx">
+      <DependentUpon>services.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\SukuCadang\SukuCadang.resx">
+      <DependentUpon>SukuCadang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\Supplier\supplier.resx">
+      <DependentUpon>supplier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Dataset\DealeraBengkelDataSet.xsc">
+      <DependentUpon>DealeraBengkelDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset\DealeraBengkelDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DealeraBengkelDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Dataset\DealeraBengkelDataSet.xss">
+      <DependentUpon>DealeraBengkelDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DealerBengkelSempurna.xsc">
+      <DependentUpon>DealerBengkelSempurna.xsd</DependentUpon>
+    </None>
+    <None Include="DealerBengkelSempurna.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DealerBengkelSempurna.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DealerBengkelSempurna.xss">
+      <DependentUpon>DealerBengkelSempurna.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
